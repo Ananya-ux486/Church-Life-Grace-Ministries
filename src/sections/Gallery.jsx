@@ -1,3 +1,9 @@
+import gallery1 from "../assets/gallery1.jpg";
+import gallery2 from "../assets/gallery2.jpg";
+import gallery3 from "../assets/gallery3.jpg";
+import gallery4 from "../assets/gallery4.jpg";
+import gallery5 from "../assets/gallery5.jpg";
+import youth from "../assets/youth.jpg";
 function Gallery() {
   return (
     <section className="py-24 bg-gray-100">
@@ -12,12 +18,41 @@ function Gallery() {
 
         <div className="grid md:grid-cols-3 gap-6">
 
-          <div className="h-72 bg-gray-300 rounded-2xl"></div>
-          <div className="h-72 bg-gray-300 rounded-2xl"></div>
-          <div className="h-72 bg-gray-300 rounded-2xl"></div>
-          <div className="h-72 bg-gray-300 rounded-2xl"></div>
-          <div className="h-72 bg-gray-300 rounded-2xl"></div>
-          <div className="h-72 bg-gray-300 rounded-2xl"></div>
+          <img
+  src={gallery1}
+  alt="Gallery 1"
+  className="w-full h-72 object-cover rounded-2xl hover:scale-105 transition duration-300"
+/>
+
+<img
+  src={gallery2}
+  alt="Gallery 2"
+  className="w-full h-72 object-cover rounded-2xl hover:scale-105 transition duration-300"
+/>
+
+<img
+  src={gallery3}
+  alt="Gallery 3"
+  className="w-full h-72 object-cover rounded-2xl hover:scale-105 transition duration-300"
+/>
+
+<img
+  src={gallery4}
+  alt="Gallery 4"
+  className="w-full h-72 object-cover rounded-2xl hover:scale-105 transition duration-300"
+/>
+
+<img
+  src={gallery5}
+  alt="Gallery 5"
+  className="w-full h-72 object-cover rounded-2xl hover:scale-105 transition duration-300"
+/>
+
+<img
+  src={youth}
+  alt="Youth"
+  className="w-full h-72 object-cover rounded-2xl hover:scale-105 transition duration-300"
+/>
 
         </div>
 
