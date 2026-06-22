@@ -1,30 +1,37 @@
+import thursday from "../assets/thursday.jpg";
+
 function ThursdayService() {
   return (
-    <section className="py-24 bg-white">
+    <section id="thursday-service" className="py-24 bg-gradient-to-b from-[#0d1326] to-black">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-16">
+        <div className="group relative overflow-hidden rounded-[35px] shadow-2xl">
 
-          <span className="text-yellow-500 uppercase font-semibold">
-            Mid Week Prayer
-          </span>
+          <img
+            src={thursday}
+            alt="Thursday Service"
+            className="w-full h-[650px] object-cover group-hover:scale-110 transition-all duration-700"
+          />
 
-          <h2 className="text-5xl font-bold text-blue-900 mt-4">
-            Thursday Prayer Service
-          </h2>
+          <div className="absolute inset-0 bg-black/60"></div>
 
-        </div>
+          <div className="absolute bottom-12 left-12">
 
-        <div className="bg-blue-950 text-white rounded-3xl p-10 text-center">
+            <span className="bg-red-600 px-6 py-2 rounded-full text-white font-semibold">
+              Every Thursday
+            </span>
 
-          <p className="text-xl">
-            Join us every Thursday for prayer, encouragement
-            and spiritual renewal.
-          </p>
+            <h2 className="text-5xl md:text-7xl font-black text-white mt-6">
+              Wonders &
+              <br />
+              Deliverance Night
+            </h2>
 
-          <div className="mt-8 text-2xl font-bold text-yellow-400">
-            Every Thursday • 7:00 PM
+            <p className="text-orange-300 text-2xl mt-4">
+              07:00 PM
+            </p>
+
           </div>
 
         </div>

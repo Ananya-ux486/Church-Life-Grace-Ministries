@@ -1,56 +1,64 @@
+import about1 from "../assets/about1.jpg";
+import about2 from "../assets/about2.jpg";
 function OurChurch() {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-[#f8f8f8]">
+
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        {/* Block 1 */}
 
-          {/* Left Image */}
-          <div>
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
+
+          <div className="overflow-hidden rounded-[40px] shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65"
-              alt="Church"
-              className="rounded-2xl shadow-2xl w-full"
+              src={about1}
+              alt="Bishop"
+              className="w-full hover:scale-110 transition-all duration-700"
             />
           </div>
 
-          {/* Right Content */}
           <div>
 
-            <span className="text-red-500 font-semibold uppercase">
-              About Our Church
+            <span className="uppercase tracking-[4px] text-orange-500 font-semibold">
+              ABOUT OUR CHURCH
             </span>
 
-            <h2 className="text-5xl font-bold text-blue-900 mt-4">
-              Growing Together In Faith
+            <h2 className="text-5xl lg:text-7xl font-black mt-4 leading-tight">
+              Faith, Hope &
+              <span className="text-orange-500">
+                {" "}Love
+              </span>
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-8">
-              Life Grace Ministries is committed to spreading the
-              Gospel, serving communities, and helping people
-              strengthen their relationship with God through
-              worship, prayer, and fellowship.
+            <p className="text-gray-600 mt-8 text-lg leading-9">
+              Life Grace Ministries International is committed to
+              spreading the Gospel, transforming lives and building
+              a strong community of believers through worship,
+              prayer and service.
             </p>
 
-            <div className="mt-8">
+            <div className="grid grid-cols-2 gap-6 mt-10">
 
-              <h3 className="text-2xl font-bold text-blue-800">
-                Mission
-              </h3>
+              <div className="bg-white p-6 rounded-3xl shadow-lg">
+                <h3 className="text-3xl font-bold text-orange-500">
+                  Mission
+                </h3>
 
-              <p className="mt-2 text-gray-600">
-                To share God's love and transform lives through
-                faith and service.
-              </p>
+                <p className="mt-3 text-gray-600">
+                  To share God's love and transform lives.
+                </p>
+              </div>
 
-              <h3 className="text-2xl font-bold text-blue-800 mt-6">
-                Vision
-              </h3>
+              <div className="bg-white p-6 rounded-3xl shadow-lg">
+                <h3 className="text-3xl font-bold text-orange-500">
+                  Vision
+                </h3>
 
-              <p className="mt-2 text-gray-600">
-                Building a strong and compassionate faith
-                community across the world.
-              </p>
+                <p className="mt-3 text-gray-600">
+                  Building a strong faith community worldwide.
+                </p>
+              </div>
 
             </div>
 
@@ -58,7 +66,48 @@ function OurChurch() {
 
         </div>
 
+        {/* Block 2 */}
+
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+          <div>
+
+            <span className="uppercase tracking-[4px] text-orange-500 font-semibold">
+              WORSHIP WITH US
+            </span>
+
+            <h2 className="text-5xl lg:text-7xl font-black mt-4 leading-tight">
+              Growing Together
+              <span className="text-orange-500">
+                {" "}In Faith
+              </span>
+            </h2>
+
+            <p className="text-gray-600 mt-8 text-lg leading-9">
+              Join us every week for powerful worship services,
+              prayer meetings, youth gatherings and community
+              outreach programs that strengthen faith and bring
+              people closer to God.
+            </p>
+
+            <button className="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300">
+              Learn More
+            </button>
+
+          </div>
+
+          <div className="overflow-hidden rounded-[40px] shadow-2xl">
+            <img
+              src={about2}
+              alt="Church Worship"
+              className="w-full hover:scale-110 transition-all duration-700"
+            />
+          </div>
+
+        </div>
+
       </div>
+
     </section>
   );
 }

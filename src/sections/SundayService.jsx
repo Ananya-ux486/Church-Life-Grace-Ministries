@@ -1,64 +1,58 @@
+import sunday from "../assets/sunday.jpg";
+
 function SundayService() {
   return (
-    <section id="events" className="py-24 bg-gray-100">
-
+    <section id="events" className="py-24 bg-gradient-to-b from-black to-[#111827]">
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-16">
+        <div className="group relative overflow-hidden rounded-[35px] shadow-2xl">
 
-          <span className="text-red-500 uppercase font-semibold">
-            Weekly Worship
-          </span>
+          <img
+            src={sunday}
+            alt="Sunday Service"
+            className="w-full h-[650px] object-cover group-hover:scale-110 transition-all duration-700"
+          />
 
-          <h2 className="text-5xl font-bold text-blue-900 mt-4">
-            Sunday Service
-          </h2>
+          <div className="absolute inset-0 bg-black/50"></div>
 
-        </div>
-
-        <div className="bg-white rounded-3xl shadow-2xl p-10">
-
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-
-            <div>
-              <h3 className="text-xl font-bold text-blue-900">
-                Time
-              </h3>
-
-              <p className="mt-3 text-gray-600">
-                Every Sunday
-                <br />
-                10:00 AM
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-blue-900">
-                Location
-              </h3>
-
-              <p className="mt-3 text-gray-600">
-                Life Grace Ministries
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-bold text-blue-900">
-                Worship
-              </h3>
-
-              <p className="mt-3 text-gray-600">
-                Praise, Worship & Teaching
-              </p>
-            </div>
-
+          {/* Floating Badge */}
+          <div className="absolute top-10 left-10 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full border border-white/30">
+            <span className="text-white font-semibold">
+              Every Sunday
+            </span>
           </div>
 
-          <div className="text-center mt-10">
+          {/* Content */}
+          <div className="absolute bottom-12 left-12 max-w-2xl">
 
-            <button className="bg-red-600 text-white px-10 py-4 rounded-lg font-semibold hover:bg-red-700">
-              Join Service
-            </button>
+            <span className="uppercase tracking-[4px] text-yellow-300 font-semibold">
+              Worship With Us
+            </span>
+
+            <h2 className="text-5xl md:text-7xl font-black text-white mt-4 leading-tight">
+              Power Sunday
+              <br />
+              <span className="text-yellow-400">
+                Service
+              </span>
+            </h2>
+
+            <p className="text-gray-200 text-xl mt-5">
+              Experience powerful worship, prayer,
+              miracles and spiritual growth every Sunday.
+            </p>
+
+            <div className="flex gap-4 mt-8 flex-wrap">
+
+              <div className="bg-yellow-500 text-black px-6 py-3 rounded-full font-bold">
+                11:00 AM
+              </div>
+
+              <button className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition-all duration-300">
+                Join Service
+              </button>
+
+            </div>
 
           </div>
 

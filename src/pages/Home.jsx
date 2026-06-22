@@ -1,13 +1,13 @@
 import Header from "../layout/Header";
 import Hero from "../sections/Hero";
 import OurChurch from "../sections/OurChurch";
+import Leadership from "../sections/Leadership";
 import MainServices from "../sections/MainServices";
 import YouthServices from "../sections/YouthServices";
 import SundayService from "../sections/SundayService";
 import ThursdayService from "../sections/ThursdayService";
 import GoFundMe from "../sections/GoFundMe";
 import LordsCity from "../sections/LordsCity";
-import BisophSection from "../sections/BisophSection";
 import Gallery from "../sections/Gallery";
 import Counselling from "../sections/Counselling";
 import ContactInfo from "../sections/ContactInfo";
@@ -18,7 +18,7 @@ function Home() {
       <Header />
       <Hero />
       <OurChurch />
-      <BisophSection />
+      <Leadership />
       <Gallery />
       <MainServices />
       <YouthServices />
@@ -29,7 +29,7 @@ function Home() {
       <Counselling />
       <ContactInfo />
       <Footer />
-    </>
+      </>
   );
 }
 
