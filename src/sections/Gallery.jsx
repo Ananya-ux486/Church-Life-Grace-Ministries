@@ -18,11 +18,13 @@ function Gallery() {
 
         <div className="grid md:grid-cols-3 gap-6">
 
-          <img
-  src={gallery1}
-  alt="Gallery 1"
-  className="w-full h-72 object-cover rounded-2xl hover:scale-105 transition duration-300"
-/>
+         <div className="overflow-hidden rounded-2xl">
+  <img
+    src={gallery1}
+    alt="Gallery 1"
+    className="w-full h-72 object-cover hover:scale-110 transition duration-500"
+  />
+</div>
 
 <img
   src={gallery2}

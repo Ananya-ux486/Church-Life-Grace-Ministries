@@ -9,6 +9,7 @@ import GoFundMe from "../sections/GoFundMe";
 import LordsCity from "../sections/LordsCity";
 import BisophSection from "../sections/BisophSection";
 import Gallery from "../sections/Gallery";
+import Counselling from "../sections/Counselling";
 import ContactInfo from "../sections/ContactInfo";
 import Footer from "../layout/Footer";
 function Home() {
@@ -17,14 +18,15 @@ function Home() {
       <Header />
       <Hero />
       <OurChurch />
+      <BisophSection />
+      <Gallery />
       <MainServices />
       <YouthServices />
       <SundayService />
       <ThursdayService />
       <GoFundMe />
       <LordsCity />
-      <BisophSection />
-      <Gallery />
+      <Counselling />
       <ContactInfo />
       <Footer />
     </>
