@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+import bisoph from "../assets/bisoph.jpg";
+import revGrace from "../assets/rev-grace.jpg";
+// import { motion } from "framer-motion";
+// import { useEffect, useState } from "react";
+
 function Hero() {
   const slides = [
     {
@@ -18,7 +23,16 @@ function Hero() {
         "https://images.unsplash.com/photo-1519491050282-cf00c82424b4",
       text: "Making a difference through outreach and compassionate service.",
     },
-  ];
+    {
+    image: bisoph,
+    text: "Transforming lives through faith, worship and community.",
+  },
+  {
+    image: revGrace,
+    text: "Join a welcoming community of worship, prayer and fellowship.",
+  },
+];
+
 
   const [currentImage, setCurrentImage] = useState(0);
 

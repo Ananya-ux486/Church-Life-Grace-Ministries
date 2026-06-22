@@ -1,3 +1,4 @@
+import CursorGlow from "../components/CursorGlow";
 import Header from "../layout/Header";
 import Hero from "../sections/Hero";
 import OurChurch from "../sections/OurChurch";
@@ -15,6 +16,7 @@ import Footer from "../layout/Footer";
 function Home() {
   return (
     <>
+      <CursorGlow />
       <Header />
       <Hero />
       <OurChurch />
