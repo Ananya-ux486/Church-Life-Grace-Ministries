@@ -1,4 +1,3 @@
-import cross from "../assets/cross.png";
 function Footer() {
   return (
     <footer className="bg-[#071B34] text-white pt-20 pb-8">

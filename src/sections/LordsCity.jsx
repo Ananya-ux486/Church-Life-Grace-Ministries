@@ -1,5 +1,20 @@
+import { useState } from "react";
+
+import video1 from "../assets/video/video1.mp4";
+import video2 from "../assets/video/video2.mp4";
+import video3 from "../assets/video/video3.mp4";
+import video4 from "../assets/video/video4.mp4";
 function LordsCity() {
+  const videos = [video1, video2, video3, video4];
+
+const [currentVideo, setCurrentVideo] = useState(0);
+
+
+
+  
+  
   return (
+    
     <section
       id="lordscity"
       className="relative overflow-hidden py-28 bg-gradient-to-br from-sky-100 via-cyan-50 to-indigo-100"
@@ -36,48 +51,72 @@ function LordsCity() {
 
         </div>
 
-        {/* Lord's City Video Placeholder */}
+        {/* Lord's City Video Slider */}
 
 <div className="mt-20">
 
-  <div className="relative overflow-hidden rounded-[35px] shadow-2xl group">
+  {/* Main Video */}
 
-    <img
-      src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1600"
-      alt="Lord's City"
-      className="w-full h-[550px] object-cover group-hover:scale-105 transition-all duration-700"
+  <div className="relative overflow-hidden rounded-[35px] shadow-2xl bg-black">
+
+    <video
+      key={currentVideo}
+      src={videos[currentVideo]}
+      controls
+      playsInline
+      className="w-full h-[650px] object-cover"
     />
 
-    <div className="absolute inset-0 bg-black/50"></div>
+    <div className="absolute bottom-6 left-6 bg-black/50 backdrop-blur-md px-5 py-3 rounded-2xl">
 
-    <div className="absolute inset-0 flex items-center justify-center">
-
-      <div className="w-28 h-28 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 animate-pulse">
-
-        <span className="text-5xl text-white">
-          ▶
-        </span>
-
-      </div>
-
-    </div>
-
-    <div className="absolute bottom-10 left-10">
-
-      <h3 className="text-4xl font-black text-white">
-        Lord's City Video
+      <h3 className="text-white text-2xl font-bold">
+        Lord's City
       </h3>
 
-      <p className="text-white/90 mt-3 text-lg">
-        Official video presentation coming soon...
+      <p className="text-white/80 text-sm">
+        Video {currentVideo + 1} of {videos.length}
       </p>
 
     </div>
 
   </div>
 
-</div>
+  {/* Thumbnails */}
 
+  <div className="flex justify-center gap-4 mt-8 flex-wrap">
+
+    {videos.map((video, index) => (
+
+      <div
+        key={index}
+        onClick={() => setCurrentVideo(index)}
+        className={`
+          cursor-pointer
+          overflow-hidden
+          rounded-2xl
+          transition-all
+          duration-300
+          ${
+            currentVideo === index
+              ? "ring-4 ring-cyan-500 scale-105"
+              : "opacity-70 hover:opacity-100"
+          }
+        `}
+      >
+
+        <video
+          src={video}
+          muted
+          className="w-36 h-24 object-cover"
+        />
+
+      </div>
+
+    ))}
+
+  </div>
+
+</div>
 {/* Address */}
 
 <div className="mt-12 bg-white/70 backdrop-blur-xl p-8 rounded-[30px] shadow-xl border border-white">
