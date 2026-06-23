@@ -58,12 +58,12 @@ function Header() {
           <div className="flex items-center gap-4">
 
             <button
-              onClick={() => {
-                document.getElementById("gofundme")?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-              }}
+  onClick={() =>
+    window.open(
+      "https://pleasegofundme.com/",
+      "_blank"
+    )
+  }
               className="
               bg-gradient-to-r
               from-orange-500

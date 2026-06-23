@@ -182,3 +182,20 @@
     border-right-color: var(--border);
   }
 }
+@keyframes crossFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-crossFloat {
+  animation: crossFloat 4s ease-in-out infinite;
+}

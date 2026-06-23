@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
+import about3 from "../assets/about3.png";
 import bisoph from "../assets/bisoph.jpg";
 import revGrace from "../assets/rev-grace.jpg";
 // import { motion } from "framer-motion";
@@ -9,9 +9,8 @@ import revGrace from "../assets/rev-grace.jpg";
 function Hero() {
   const slides = [
     {
-      image:
-        "https://images.unsplash.com/photo-1438032005730-c779502df39b",
-      text: "Transforming lives through faith, worship and community.",
+      image: about3,
+    text: "Welcome to Life Grace Ministries. Experience faith, worship and spiritual transformation."
     },
     {
       image:

@@ -158,9 +158,9 @@ function GoFundMe() {
             <button
               onClick={() =>
                 window.open(
-                  "https://www.gofundme.com/",
-                  "_blank"
-                )
+  "https://pleasegofundme.com/",
+  "_blank"
+)
               }
               className="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-full font-bold"
             >
