@@ -17,70 +17,93 @@ function ContactInfo() {
             Reach Out To Our Ministry
           </h2>
 
-          <p className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 mt-6 max-w-3xl mx-auto text-lg">
             We would love to hear from you. Whether you need prayer,
             counselling or ministry information, our team is here to help.
           </p>
 
         </div>
 
-        {/* Contact Section */}
-        <div className="grid lg:grid-cols-2 gap-12">
+        {/* Contact Cards */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
 
-          {/* LEFT SIDE */}
-          <div className="space-y-6">
+          <div className="bg-white p-8 rounded-[25px] shadow-lg hover:shadow-xl transition-all duration-300">
 
-            <div className="bg-white p-6 rounded-[25px] shadow-lg hover:shadow-xl transition-all duration-300">
-              <p className="text-orange-500 font-semibold mb-2">
-                📞 Call Us
-              </p>
+            <div className="text-4xl mb-4">📞</div>
 
-              <p className="text-[#071B34] text-2xl font-bold">
-                +44 (0)20 8617 9624
-              </p>
-            </div>
+            <h3 className="text-orange-500 font-bold text-xl mb-3">
+              Call Us
+            </h3>
 
-            <div className="bg-white p-6 rounded-[25px] shadow-lg hover:shadow-xl transition-all duration-300">
-              <p className="text-orange-500 font-semibold mb-2">
-                📧 Email Us
-              </p>
-
-              <p className="text-[#071B34] text-xl font-bold break-all">
-                info@lifegraceministries.com
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-[25px] shadow-lg hover:shadow-xl transition-all duration-300">
-              <p className="text-orange-500 font-semibold mb-2">
-                📍 Visit Us
-              </p>
-
-              <p className="text-[#071B34] text-xl font-bold">
-                81 Parcemore Road,
-                <br />
-                Thorn,
-                <br />
-                United Kingdom
-              </p>
-            </div>
+            <p className="text-[#071B34] text-2xl font-bold">
+              +44 (0)20 8617 9624
+            </p>
 
           </div>
 
-          {/* RIGHT SIDE FORM */}
-          <div className="bg-white p-8 rounded-[35px] shadow-2xl">
+          <div className="bg-white p-8 rounded-[25px] shadow-lg hover:shadow-xl transition-all duration-300">
 
-            <form className="space-y-6">
+            <div className="text-4xl mb-4">📍</div>
+
+            <h3 className="text-orange-500 font-bold text-xl mb-3">
+              Visit Us
+            </h3>
+
+            <p className="text-[#071B34] text-lg font-bold">
+              Lord's City Adoration Ground,
+              <br />
+              Umuocheta, Amiri,
+              <br />
+              Imo State, Nigeria
+            </p>
+
+          </div>
+
+          <div className="bg-white p-8 rounded-[25px] shadow-lg hover:shadow-xl transition-all duration-300">
+
+            <div className="text-4xl mb-4">📧</div>
+
+            <h3 className="text-orange-500 font-bold text-xl mb-3">
+              Email Us
+            </h3>
+
+            <p className="text-[#071B34] text-lg font-bold break-all">
+              info@lifegraceministries.com
+            </p>
+
+          </div>
+
+        </div>
+
+        {/* Form + Map */}
+        <div className="grid lg:grid-cols-2 gap-10">
+
+          {/* Form */}
+          <div className="bg-white p-10 rounded-[30px] shadow-2xl">
+
+            <form
+  className="space-y-6"
+  onSubmit={(e) => {
+    e.preventDefault();
+
+    alert(
+      "Thank you for contacting Life Grace Ministries. We will get back to you soon."
+    );
+  }}
+>
 
               <div className="grid md:grid-cols-2 gap-4">
 
                 <input
                   type="text"
+                  required
                   placeholder="First Name"
                   className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-orange-500"
                 />
 
                 <input
                   type="text"
+                  required
                   placeholder="Last Name"
                   className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-orange-500"
                 />
@@ -91,12 +114,14 @@ function ContactInfo() {
 
                 <input
                   type="email"
+                  required
                   placeholder="Email Address"
                   className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-orange-500"
                 />
 
                 <input
                   type="text"
+                  required
                   placeholder="Phone Number"
                   className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-orange-500"
                 />
@@ -104,14 +129,25 @@ function ContactInfo() {
               </div>
 
               <textarea
-                rows="6"
-                placeholder="Your Message"
+                rows="8"
+                placeholder="Write your message..."
                 className="w-full p-4 rounded-xl border border-gray-200 focus:outline-none focus:border-orange-500"
               ></textarea>
 
               <button
                 type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full font-semibold transition-all duration-300"
+                className="
+                bg-orange-500
+                hover:bg-orange-600
+                text-white
+                px-12
+                py-4
+                rounded-xl
+                font-bold
+                transition-all
+                duration-300
+                hover:scale-105
+                "
               >
                 Send Message
               </button>
@@ -120,19 +156,19 @@ function ContactInfo() {
 
           </div>
 
-        </div>
+          {/* Map */}
+          <div className="overflow-hidden rounded-[30px] shadow-2xl">
 
-        {/* MAP */}
-        <div className="mt-16 overflow-hidden rounded-[35px] shadow-2xl">
+            <iframe
+              title="Lord's City Location"
+              src="https://maps.google.com/maps?q=Amiri%20Imo%20State%20Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="650"
+              style={{ border: 0 }}
+              loading="lazy"
+            ></iframe>
 
-          <iframe
-            title="Church Location"
-            src="https://maps.google.com/maps?q=81%20Parcemore%20Road%20Thorn%20United%20Kingdom&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            loading="lazy"
-          ></iframe>
+          </div>
 
         </div>
 

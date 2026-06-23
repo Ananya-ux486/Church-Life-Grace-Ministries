@@ -48,9 +48,16 @@ function SundayService() {
                 11:00 AM
               </div>
 
-              <button className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-500 hover:text-black transition-all duration-300">
-                Join Service
-              </button>
+              <button
+  onClick={() =>
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+  className="bg-white text-black px-10 py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300"
+>
+  Join Service
+</button>
 
             </div>
 

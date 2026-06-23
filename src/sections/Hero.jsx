@@ -108,40 +108,50 @@ function Hero() {
             transition={{ duration: 1.5 }}
           >
             <button
-              className="
-              bg-red-600
-              hover:bg-red-700
-              hover:scale-110
-              px-10
-              py-4
-              rounded-full
-              font-semibold
-              text-lg
-              shadow-xl
-              transition-all
-              duration-300
-              "
-            >
-              Join Us
-            </button>
+  onClick={() =>
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+  className="
+  bg-red-600
+  hover:bg-red-700
+  hover:scale-110
+  px-10
+  py-4
+  rounded-full
+  font-semibold
+  text-lg
+  shadow-xl
+  transition-all
+  duration-300
+  "
+>
+  Join Us
+</button>
 
-            <button
-              className="
-              bg-white
-              text-black
-              hover:scale-110
-              px-10
-              py-4
-              rounded-full
-              font-semibold
-              text-lg
-              shadow-xl
-              transition-all
-              duration-300
-              "
-            >
-              Donate Now
-            </button>
+           <button
+  onClick={() =>
+    document.getElementById("gofundme")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+  className="
+  bg-white
+  text-black
+  hover:scale-110
+  px-10
+  py-4
+  rounded-full
+  font-semibold
+  text-lg
+  shadow-xl
+  transition-all
+  duration-300
+  "
+>
+  Donate Now
+</button>
           </motion.div>
 
         </div>

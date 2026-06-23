@@ -1,6 +1,9 @@
+import { useState } from "react";
+import bishopImage from "../assets/bisoph1.jpeg";
 import revGrace from "../assets/rev-grace.jpg";
 
 function Leadership() {
+   const [showMore, setShowMore] = useState(false);
   return (
     <section className="py-24 bg-gradient-to-b from-orange-50 via-white to-blue-50">
 
@@ -74,25 +77,13 @@ function Leadership() {
 
           </div>
 
-          <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden">
-
-            <div className="h-[550px] flex items-center justify-center bg-gradient-to-br from-orange-100 to-orange-50">
-
-              <div className="text-center px-10">
-
-                <h3 className="text-4xl font-bold text-gray-700">
-                  Bishop Image
-                </h3>
-
-                <p className="text-gray-500 mt-4">
-                  Waiting for approved image from Bishop.
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
+          <div className="overflow-hidden rounded-[40px] shadow-2xl">
+  <img
+    src={bishopImage}
+    alt="Bishop Dr. V. Odumma"
+    className="w-full h-[650px] object-cover hover:scale-105 transition-all duration-700"
+  />
+</div>
 
         </div>
 
@@ -149,9 +140,42 @@ function Leadership() {
               ministry's vision both locally and internationally.
             </p>
 
-            <button className="mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105">
-              Learn More
-            </button>
+            <button
+  onClick={() => setShowMore(!showMore)}
+  className="mt-10 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105"
+>
+  {showMore ? "Show Less" : "Learn More"}
+</button>
+{showMore && (
+  <div className="mt-10 bg-white p-8 rounded-3xl shadow-xl border border-orange-100">
+
+    <h4 className="text-3xl font-bold text-orange-500 mb-5">
+      Expanding God's Kingdom Through Love & Service
+    </h4>
+
+    <p className="text-gray-600 leading-8 text-lg">
+      Reverend Grace Vitalis plays a vital role in supporting the vision
+      of Life Grace Ministries International. Through worship leadership,
+      prayer ministry and community outreach, she encourages believers
+      to grow deeper in their relationship with God and live lives filled
+      with faith, hope and purpose.
+    </p>
+
+    <p className="text-gray-600 leading-8 text-lg mt-5">
+      Her ministry focuses on empowering women, strengthening families,
+      mentoring young people and extending compassion to those in need.
+      She continues to inspire individuals through biblical teachings,
+      prayer gatherings and spiritual encouragement.
+    </p>
+
+    <p className="text-gray-600 leading-8 text-lg mt-5">
+      Together with the leadership team, she supports outreach programs,
+      community development initiatives and faith-based projects that
+      impact lives both locally and internationally.
+    </p>
+
+  </div>
+)}
 
           </div>
 

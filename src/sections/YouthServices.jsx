@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 function YouthServices() {
+  const [showMore, setShowMore] = useState(false);
+
   return (
-    <section className="py-24 bg-white">
+    <section id="youth-services" className="py-24 bg-white">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -18,7 +22,7 @@ function YouthServices() {
           {/* Content */}
           <div>
 
-            <span className="text-red-500 uppercase font-semibold">
+            <span className="text-red-500 uppercase font-semibold tracking-[3px]">
               Next Generation
             </span>
 
@@ -33,17 +37,89 @@ function YouthServices() {
               outreach and discipleship.
             </p>
 
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex gap-4 flex-wrap">
 
-              <button className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold">
+              {/* Join Button */}
+              <button
+                onClick={() =>
+                  document.getElementById("contact")?.scrollIntoView({
+                    behavior: "smooth",
+                  })
+                }
+                className="
+                bg-red-600
+                hover:bg-red-700
+                text-white
+                px-8
+                py-4
+                rounded-lg
+                font-semibold
+                transition-all
+                duration-300
+                hover:scale-105
+                "
+              >
                 Join Youth Ministry
               </button>
 
-              <button className="border-2 border-blue-900 text-blue-900 px-8 py-4 rounded-lg font-semibold">
-                Learn More
+              {/* Learn More Button */}
+              <button
+                onClick={() => setShowMore(!showMore)}
+                className="
+                border-2
+                border-blue-900
+                text-blue-900
+                px-8
+                py-4
+                rounded-lg
+                font-semibold
+                hover:bg-blue-900
+                hover:text-white
+                transition-all
+                duration-300
+                "
+              >
+                {showMore ? "Show Less" : "Learn More"}
               </button>
 
             </div>
+
+            {/* Expandable Content */}
+
+            {showMore && (
+              <div className="mt-8 bg-blue-50 p-6 rounded-2xl shadow-lg">
+
+                <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                  Youth Ministry Activities
+                </h3>
+
+                <ul className="space-y-3 text-gray-700">
+
+                  <li>✅ Weekly Youth Fellowship & Worship</li>
+
+                  <li>✅ Leadership Development Programs</li>
+
+                  <li>✅ Bible Study & Prayer Sessions</li>
+
+                  <li>✅ Community Outreach Activities</li>
+
+                  <li>✅ Mentorship & Spiritual Growth</li>
+
+                  <li>✅ Music, Arts & Creative Ministry</li>
+
+                  <li>✅ Youth Conferences & Special Events</li>
+
+                </ul>
+
+                <p className="mt-5 text-gray-600 leading-7">
+                  Our vision is to raise a generation of young people
+                  who are spiritually grounded, purpose-driven and
+                  committed to making a positive impact in their
+                  communities through faith and service.
+                </p>
+
+              </div>
+            )}
 
           </div>
 

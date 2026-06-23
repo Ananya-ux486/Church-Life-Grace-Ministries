@@ -1,28 +1,38 @@
 function MainServices() {
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   const services = [
     {
       icon: "🙏",
       title: "Sunday Worship",
       description:
         "Join us every Sunday for powerful worship and spiritual growth.",
+      section: "events",
     },
     {
       icon: "📖",
       title: "Bible Study",
       description:
         "Learn God's word through interactive teaching and discussion.",
+      section: "thursday-service",
     },
     {
       icon: "🎵",
       title: "Praise & Worship",
       description:
         "Experience uplifting praise and worship with our ministry team.",
+      section: "gallery",
     },
     {
       icon: "❤️",
       title: "Community Outreach",
       description:
         "Serving communities with compassion, faith and practical support.",
+      section: "gofundme",
     },
   ];
 
@@ -33,9 +43,7 @@ function MainServices() {
     >
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Heading */}
         <div className="text-center mb-16">
-
           <span className="text-yellow-400 uppercase font-semibold tracking-[4px]">
             What We Do
           </span>
@@ -47,16 +55,16 @@ function MainServices() {
           <p className="text-gray-300 mt-4 text-lg">
             Worship, Fellowship and Spiritual Growth
           </p>
-
         </div>
 
-        {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {services.map((service, index) => (
             <div
               key={index}
+              onClick={() => scrollToSection(service.section)}
               className="
+              cursor-pointer
               bg-gradient-to-br
               from-white
               via-yellow-50
@@ -83,6 +91,10 @@ function MainServices() {
 
               <p className="text-gray-700 mt-4 leading-relaxed">
                 {service.description}
+              </p>
+
+              <p className="mt-5 text-orange-600 font-semibold">
+                Learn More →
               </p>
 
             </div>

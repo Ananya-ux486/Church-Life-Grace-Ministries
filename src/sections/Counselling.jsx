@@ -120,9 +120,27 @@ function Counselling() {
 
             </div>
 
-            <button className="mt-10 bg-white text-orange-600 font-bold px-8 py-4 rounded-full hover:scale-105 transition-all duration-300">
-              Request Counselling
-            </button>
+            <button
+  onClick={() =>
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+  className="
+  bg-white
+  text-orange-600
+  px-10
+  py-5
+  rounded-full
+  font-bold
+  text-xl
+  hover:scale-105
+  transition-all
+  duration-300
+  "
+>
+  Request Counselling
+</button>
 
           </div>
 

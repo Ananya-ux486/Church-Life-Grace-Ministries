@@ -8,7 +8,7 @@ function Header() {
     { name: "About Us", link: "#about" },
     { name: "Services", link: "#services" },
     { name: "Events", link: "#events" },
-    { name: "Lord's City", link: "#gofundme" },
+    { name: "Lord's City", link: "#lordscity" },
     { name: "Counselling", link: "#counselling" },
     { name: "Contact Us", link: "#contact" },
   ];
@@ -58,6 +58,12 @@ function Header() {
           <div className="flex items-center gap-4">
 
             <button
+              onClick={() => {
+                document.getElementById("gofundme")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }}
               className="
               bg-gradient-to-r
               from-orange-500
@@ -99,6 +105,7 @@ function Header() {
                 key={item.name}
                 href={item.link}
                 className="hover:text-yellow-400 transition-all duration-300 px-2"
+                onClick={() => setMenuOpen(false)}
               >
                 {item.name}
               </a>

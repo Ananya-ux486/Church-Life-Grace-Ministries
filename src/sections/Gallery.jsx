@@ -22,7 +22,7 @@ function Gallery() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-blue-50 to-white">
+    <section id="gallery" className="py-24 bg-gradient-to-b from-white via-blue-50 to-white">
 
       <div className="max-w-7xl mx-auto px-6">
 
