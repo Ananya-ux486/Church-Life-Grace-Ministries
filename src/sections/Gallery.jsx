@@ -1,3 +1,6 @@
+import about3 from "../assets/about3.png";
+import sunday from "../assets/sunday.jpg";
+import thursday from "../assets/thursday.jpg";
 import gallery1 from "../assets/gallery1.jpg";
 import gallery2 from "../assets/gallery2.jpg";
 import gallery3 from "../assets/gallery3.jpg";
@@ -13,6 +16,9 @@ import "swiper/css/navigation";
 
 function Gallery() {
   const images = [
+    about3,
+  sunday,
+  thursday,
     gallery1,
     gallery2,
     gallery3,
@@ -69,19 +75,32 @@ function Gallery() {
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <div className="overflow-hidden rounded-3xl shadow-xl">
+              <div
+  className="
+  overflow-hidden
+  rounded-3xl
+  shadow-2xl
+  border-4
+  border-white
+  bg-white
+  hover:-translate-y-2
+  transition-all
+  duration-500
+"
+>
 
                 <img
                   src={img}
                   alt={`Gallery ${index + 1}`}
                   className="
-                    w-full
-                    h-96
-                    object-cover
-                    hover:scale-110
-                    transition-all
-                    duration-700
-                  "
+w-full
+h-96
+object-cover
+hover:scale-110
+hover:rotate-1
+transition-all
+duration-700
+"
                 />
 
               </div>
