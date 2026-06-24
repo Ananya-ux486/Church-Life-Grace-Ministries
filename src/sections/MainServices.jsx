@@ -1,4 +1,16 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function MainServices() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: false,
+    });
+  }, []);
+
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
@@ -18,7 +30,7 @@ function MainServices() {
       title: "Bible Study",
       description:
         "Learn God's word through interactive teaching and discussion.",
-      section: "thursday-service",
+      section: "thursdayservice",
     },
     {
       icon: "🎵",
@@ -60,26 +72,34 @@ function MainServices() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {services.map((service, index) => (
-            <div
+  <div
+    data-aos={
+      index === 0
+        ? "fade-right"
+        : index === 1
+        ? "zoom-in"
+        : index === 2
+        ? "fade-left"
+        : "fade-up"
+    }
               key={index}
               onClick={() => scrollToSection(service.section)}
               className="
-              cursor-pointer
-              bg-gradient-to-br
-              from-white
-              via-yellow-50
-              to-orange-100
-              rounded-3xl
-              p-8
-              shadow-xl
-              hover:shadow-2xl
-              hover:-translate-y-4
-              hover:scale-105
-              transition-all
-              duration-500
-              border
-              border-white/50
-              "
+cursor-pointer
+bg-gradient-to-br
+from-white
+via-yellow-50
+to-orange-100
+rounded-3xl
+p-8
+shadow-xl
+hover:shadow-2xl
+hover:-translate-y-4
+hover:scale-110
+hover:rotate-1
+transition-all
+duration-500
+"
             >
               <div className="text-6xl mb-6">
                 {service.icon}

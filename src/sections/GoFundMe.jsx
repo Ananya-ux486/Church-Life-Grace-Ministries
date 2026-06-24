@@ -1,6 +1,21 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function GoFundMe() {
+   const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 80,
+  },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.3,
+      duration: 0.8,
+    },
+  }),
+};
   const [showDonateModal, setShowDonateModal] = useState(false);
 
   const scrollToSection = (id) => {
@@ -36,73 +51,87 @@ function GoFundMe() {
               </p>
             </div>
 
-            {/* Cards */}
-
             <div className="grid md:grid-cols-3 gap-8 mt-16">
 
-              {/* Outreach */}
+  {/* Outreach */}
 
-              <div
-                onClick={() => scrollToSection("about")}
-                className="cursor-pointer bg-white rounded-3xl p-8 text-center shadow-xl hover:-translate-y-3 hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-500"
-              >
-                <div className="text-5xl mb-4">🙏</div>
+  <motion.div
+    custom={0}
+    variants={cardVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.3 }}
+    onClick={() => scrollToSection("about")}
+    className="cursor-pointer bg-white rounded-3xl p-8 text-center shadow-xl hover:-translate-y-3 hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-500"
+  >
+    <div className="text-5xl mb-4">🙏</div>
 
-                <h3 className="text-2xl font-bold text-cyan-500">
-                  Outreach
-                </h3>
+    <h3 className="text-2xl font-bold text-cyan-500">
+      Outreach
+    </h3>
 
-                <p className="text-gray-600 mt-4">
-                  Reaching communities through faith, hope and service.
-                </p>
+    <p className="text-gray-600 mt-4">
+      Reaching communities through faith, hope and service.
+    </p>
 
-                <p className="mt-6 text-cyan-500 font-semibold">
-                  Learn More →
-                </p>
-              </div>
+    <p className="mt-6 text-cyan-500 font-semibold">
+      Learn More →
+    </p>
+  </motion.div>
 
-              {/* Families */}
+  {/* Families */}
 
-              <div
-                onClick={() => scrollToSection("counselling")}
-                className="cursor-pointer bg-white rounded-3xl p-8 text-center shadow-xl hover:-translate-y-3 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-500"
-              >
-                <div className="text-5xl mb-4">👨‍👩‍👧‍👦</div>
+  <motion.div
+    custom={1}
+    variants={cardVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.3 }}
+    onClick={() => scrollToSection("counselling")}
+    className="cursor-pointer bg-white rounded-3xl p-8 text-center shadow-xl hover:-translate-y-3 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-500"
+  >
+    <div className="text-5xl mb-4">👨‍👩‍👧‍👦</div>
 
-                <h3 className="text-2xl font-bold text-purple-500">
-                  Families
-                </h3>
+    <h3 className="text-2xl font-bold text-purple-500">
+      Families
+    </h3>
 
-                <p className="text-gray-600 mt-4">
-                  Supporting families through prayer, guidance and care.
-                </p>
+    <p className="text-gray-600 mt-4">
+      Supporting families through prayer, guidance and care.
+    </p>
 
-                <p className="mt-6 text-purple-500 font-semibold">
-                  Learn More →
-                </p>
-              </div>
+    <p className="mt-6 text-purple-500 font-semibold">
+      Learn More →
+    </p>
+  </motion.div>
 
-              {/* Youth */}
+  {/* Youth */}
 
-              <div
-                onClick={() => scrollToSection("youth-services")}
-                className="cursor-pointer bg-white rounded-3xl p-8 text-center shadow-xl hover:-translate-y-3 hover:shadow-blue-500/40 hover:scale-105 transition-all duration-500"
-              >
-                <div className="text-5xl mb-4">🌍</div>
+  <motion.div
+    custom={2}
+    variants={cardVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: false, amount: 0.3 }}
+    onClick={() => scrollToSection("youthservice")}
+    className="cursor-pointer bg-white rounded-3xl p-8 text-center shadow-xl hover:-translate-y-3 hover:shadow-blue-500/40 hover:scale-105 transition-all duration-500"
+  >
+    <div className="text-5xl mb-4">🌍</div>
 
-                <h3 className="text-2xl font-bold text-blue-500">
-                  Youth Ministry
-                </h3>
+    <h3 className="text-2xl font-bold text-blue-500">
+      Youth Ministry
+    </h3>
 
-                <p className="text-gray-600 mt-4">
-                  Empowering the next generation through faith and leadership.
-                </p>
+    <p className="text-gray-600 mt-4">
+      Empowering the next generation through faith and leadership.
+    </p>
 
-                <p className="mt-6 text-blue-500 font-semibold">
-                  Learn More →
-                </p>
-              </div>
-            </div>
+    <p className="mt-6 text-blue-500 font-semibold">
+      Learn More →
+    </p>
+  </motion.div>
+
+</div>
 
             {/* Donate Button */}
 
