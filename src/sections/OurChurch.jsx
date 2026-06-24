@@ -14,7 +14,7 @@ function OurChurch() {
 
           {/* Images Section */}
 
-          <div className="relative h-[650px]">
+          <div className="relative h-[450px] md:h-[650px]">
 
             {/* Main Large Image */}
 
@@ -22,16 +22,19 @@ function OurChurch() {
               src={about3}
               alt="Church"
               className="
-                absolute
-                right-0
-                top-0
-                w-[500px]
-                h-[600px]
-                object-cover
-                rounded-[50px]
-                shadow-2xl
-                z-10
-              "
+absolute
+right-0
+top-0
+w-[280px]
+h-[340px]
+md:w-[500px]
+md:h-[600px]
+object-cover
+rounded-[30px]
+md:rounded-[50px]
+shadow-2xl
+z-10
+"
             />
 
             {/* Small Overlapping Image */}
@@ -40,18 +43,22 @@ function OurChurch() {
               src={about1}
               alt="Ministry"
               className="
-                absolute
-                left-0
-                bottom-0
-                w-[260px]
-                h-[340px]
-                object-cover
-                rounded-[40px]
-                border-[8px]
-                border-white
-                shadow-2xl
-                z-20
-              "
+absolute
+left-0
+bottom-0
+w-[140px]
+h-[180px]
+md:w-[260px]
+md:h-[340px]
+object-cover
+rounded-[25px]
+md:rounded-[40px]
+border-[4px]
+md:border-[8px]
+border-white
+shadow-2xl
+z-20
+"
             />
 
             {/* Decorative Circle */}

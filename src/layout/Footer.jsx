@@ -1,158 +1,308 @@
+
+
 function Footer() {
-  return (
-    <footer className="bg-[#071B34] text-white pt-20 pb-8">
+return ( <footer className="relative overflow-hidden bg-gradient-to-b from-[#081b36] via-[#0a2347] to-[#06172d] text-white pt-16 pb-8">
 
-      <div className="max-w-7xl mx-auto px-6">
+```
+  {/* Background Effects */}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+  <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[180px]"></div>
 
-          {/* Column 1 */}
+  <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[180px]"></div>
 
-          <div>
+  <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-            <h3 className="text-3xl font-black text-orange-500">
-              Life Grace Ministries
-            </h3>
+    {/* Main Footer */}
 
-            <p className="mt-6 text-gray-300 leading-8">
-              A place of faith, worship and spiritual growth.
-              We are committed to sharing God's love and
-              transforming lives through ministry and service.
-            </p>
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-          </div>
+      {/* Column 1 */}
 
-          {/* Column 2 */}
+      <div>
 
-          <div>
+        <h3 className="text-3xl font-black text-orange-500">
+          Life Grace Ministries
+        </h3>
 
-            <h4 className="text-2xl font-bold mb-6">
-              Quick Links
-            </h4>
+        <p className="mt-6 text-gray-300 leading-8">
+          A place of faith, worship and spiritual growth.
+          We are committed to sharing God's love and
+          transforming lives through ministry, prayer,
+          discipleship and community service.
+        </p>
 
-            <ul className="space-y-3 text-gray-300">
+      </div>
 
-              <li>
-                <a href="#home" className="hover:text-orange-500 transition-all">
-                  Home
-                </a>
-              </li>
+      {/* Column 2 */}
 
-              <li>
-                <a href="#about" className="hover:text-orange-500 transition-all">
-                  About Us
-                </a>
-              </li>
+      <div>
 
-              <li>
-                <a href="#services" className="hover:text-orange-500 transition-all">
-                  Services
-                </a>
-              </li>
+        <h4 className="text-2xl font-bold mb-6">
+          Quick Links
+        </h4>
 
-              <li>
-                <a href="#events" className="hover:text-orange-500 transition-all">
-                  Events
-                </a>
-              </li>
+        <ul className="space-y-4 text-gray-300">
 
-              <li>
-                <a href="#contact" className="hover:text-orange-500 transition-all">
-                  Contact Us
-                </a>
-              </li>
+          <li>
+            <a href="#home" className="hover:text-orange-500 transition-all">
+              Home
+            </a>
+          </li>
 
-            </ul>
+          <li>
+            <a href="#about" className="hover:text-orange-500 transition-all">
+              About Us
+            </a>
+          </li>
 
-          </div>
+          <li>
+            <a href="#services" className="hover:text-orange-500 transition-all">
+              Services
+            </a>
+          </li>
 
-          {/* Column 3 */}
+          <li>
+            <a href="#events" className="hover:text-orange-500 transition-all">
+              Events
+            </a>
+          </li>
 
-          <div>
+          <li>
+            <a href="#contact" className="hover:text-orange-500 transition-all">
+              Contact Us
+            </a>
+          </li>
 
-            <h4 className="text-2xl font-bold mb-6">
-              Ministries
-            </h4>
+        </ul>
 
-            <ul className="space-y-3 text-gray-300">
+      </div>
 
-              <li>Sunday Service</li>
+      {/* Column 3 */}
 
-              <li>Thursday Service</li>
+      <div>
 
-              <li>Youth Ministry</li>
+        <h4 className="text-2xl font-bold mb-6">
+          Ministries
+        </h4>
 
-              <li>Prayer Meetings</li>
+        <ul className="space-y-4 text-gray-300">
 
-              <li>Bible Study</li>
+          <li>
+            <a href="#sundayservice" className="hover:text-orange-500 transition-all">
+              Sunday Service
+            </a>
+          </li>
 
-            </ul>
+          <li>
+            <a href="#thursdayservice" className="hover:text-orange-500 transition-all">
+              Thursday Service
+            </a>
+          </li>
 
-          </div>
+          <li>
+            <a href="#youthservices" className="hover:text-orange-500 transition-all">
+              Youth Ministry
+            </a>
+          </li>
 
-          {/* Column 4 */}
+          <li>
+            <a href="#services" className="hover:text-orange-500 transition-all">
+              Prayer Meetings
+            </a>
+          </li>
 
-          <div>
+          <li>
+            <a href="#services" className="hover:text-orange-500 transition-all">
+              Bible Study
+            </a>
+          </li>
 
-            <h4 className="text-2xl font-bold mb-6">
-              Contact Info
-            </h4>
+        </ul>
 
-            <div className="space-y-4 text-gray-300">
+      </div>
 
-              <p>
-                📞 +44 (0)20 8617 9624
-              </p>
+      {/* Column 4 */}
 
-              <p>
-                📧 info@lifegraceministries.com
-              </p>
+      <div>
 
-              <p>
-                📍 81 Parcemore Road,
-                Thorn,
-                United Kingdom
-              </p>
+        <h4 className="text-2xl font-bold mb-6">
+          Contact Info
+        </h4>
 
-            </div>
+        <div className="space-y-4 text-gray-300">
 
-            {/* Social Icons */}
+          <p>📞 +44 (0)20 8617 9624</p>
 
-            <div className="flex gap-4 mt-8">
+          <p>📧 info@lifegraceministries.com</p>
 
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all duration-300 cursor-pointer">
-                f
-              </div>
-
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all duration-300 cursor-pointer">
-                ▶
-              </div>
-
-              <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all duration-300 cursor-pointer">
-                📷
-              </div>
-
-            </div>
-
-          </div>
+          <p>
+            📍 Lord's City Adoration Ground,
+            Umuocheta Amiri,
+            Imo State, Nigeria
+          </p>
 
         </div>
 
-        {/* Bottom Bar */}
+        {/* Social Icons */}
 
-        <div className="border-t border-white/10 mt-16 pt-8 text-center">
+        <div className="flex gap-4 mt-8">
 
-          <p className="text-gray-400">
-            © 2026 Life Grace Ministries International.
-            All Rights Reserved.
-          </p>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+w-12
+h-12
+bg-white/10
+rounded-full
+flex
+items-center
+justify-center
+hover:bg-orange-500
+hover:scale-110
+hover:shadow-[0_0_20px_rgba(249,115,22,0.7)]
+transition-all
+duration-300
+"
+          >
+            f
+          </a>
+
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+w-12
+h-12
+bg-white/10
+rounded-full
+flex
+items-center
+justify-center
+hover:bg-orange-500
+hover:scale-110
+hover:shadow-[0_0_20px_rgba(249,115,22,0.7)]
+transition-all
+duration-300
+"
+          >
+            ▶
+          </a>
+
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+w-12
+h-12
+bg-white/10
+rounded-full
+flex
+items-center
+justify-center
+hover:bg-orange-500
+hover:scale-110
+hover:shadow-[0_0_20px_rgba(249,115,22,0.7)]
+transition-all
+duration-300
+"
+          >
+            📷
+          </a>
 
         </div>
 
       </div>
 
-    </footer>
-  );
+    </div>
+
+    {/* Scroll Top */}
+
+   <div className="flex justify-center mt-8">
+
+      <button
+        onClick={() =>
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          })
+        }
+       className="
+w-16
+h-16
+rounded-full
+bg-gradient-to-r
+from-orange-500
+to-orange-600
+text-white
+text-3xl
+shadow-[0_0_25px_rgba(249,115,22,0.5)]
+animate-bounce
+hover:scale-110
+transition-all
+duration-300
+"
+      >
+        ↑
+      </button>
+
+    </div>
+
+    {/* Copyright */}
+
+    <div className="border-t border-white/10 mt-4 pt-6 text-center">
+
+      <p className="text-gray-400">
+        © 2026 Life Grace Ministries International.
+        All Rights Reserved.
+      </p>
+
+    </div>
+
+    {/* Development Credit */}
+
+    <div className="text-center mt-6 max-w-5xl mx-auto">
+
+      <p className="text-gray-500 leading-8">
+
+        Website designed, developed and maintained by
+
+        <a
+          href="https://ftsservices.co/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-orange-500 font-semibold hover:text-orange-400 mx-1"
+        >
+          FTS Services Ltd
+        </a>
+
+        in association with
+
+        <a
+          href="https://tasmafivesolutions.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-orange-500 font-semibold hover:text-orange-400 mx-1"
+        >
+          Tasmafive Solutions LLP
+        </a>
+
+        delivering innovative IT solutions, web development,
+        automation, cybersecurity and digital transformation
+        services for organizations worldwide.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+);
 }
 
 export default Footer;
