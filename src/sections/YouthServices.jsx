@@ -4,7 +4,7 @@ function YouthServices() {
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <section id="youth-services" className="py-24 bg-white">
+    <section id="youthservices" className="py-24 bg-white">
 
       <div className="max-w-7xl mx-auto px-6">
 

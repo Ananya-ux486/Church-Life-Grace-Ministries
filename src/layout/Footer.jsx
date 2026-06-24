@@ -1,9 +1,14 @@
 
 
 function Footer() {
-return ( <footer className="relative overflow-hidden bg-gradient-to-b from-[#081b36] via-[#0a2347] to-[#06172d] text-white pt-16 pb-8">
+return ( <footer className="relative overflow-hidden bg-gradient-to-br from-[#071B34] via-[#0A2547] to-[#0F3D6E] text-white pt-20 pb-8">
 
 ```
+<div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-orange-500/10 rounded-full blur-[150px] animate-pulse"></div>
+
+<div className="absolute -bottom-32 -right-32 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[150px] animate-pulse"></div>
+
+<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-white/5 rounded-full blur-[100px]"></div>
   {/* Background Effects */}
 
   <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[180px]"></div>

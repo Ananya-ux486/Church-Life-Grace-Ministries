@@ -2,7 +2,7 @@ import thursday from "../assets/thursday.jpg";
 
 function ThursdayService() {
   return (
-    <section id="thursday-service" className="py-24 bg-gradient-to-b from-[#0d1326] to-black">
+    <section id="thursdayservice" className="py-24 bg-gradient-to-b from-[#0d1326] to-black">
 
       <div className="max-w-7xl mx-auto px-6">
 

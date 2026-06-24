@@ -3,6 +3,10 @@ import sunday from "../assets/sunday.jpg";
 function SundayService() {
   return (
     <section id="events" className="py-24 bg-gradient-to-b from-black to-[#111827]">
+      <section
+  id="sundayservice"
+  className="py-24 bg-gradient-to-b from-black to-[#111827]"
+></section>
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="group relative overflow-hidden rounded-[35px] shadow-2xl">
